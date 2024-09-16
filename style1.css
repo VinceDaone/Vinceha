@@ -2,7 +2,7 @@
 .download-link {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 10px; /* White corners */
@@ -18,7 +18,7 @@
 
 /* Additional styling for the rest of the website */
 body {
-    background-color: #121212; /* Dark mode background */
+    background-color: #000000; /* Dark mode background */
     color: #ffffff; /* White text */
     font-family: 'Minecraft', Arial, sans-serif;
 }
@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #1f1f1f;
+    background-color: #000000;
 }
 
 #logo {
