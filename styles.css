@@ -1,0 +1,69 @@
+/* style.css */
+body {
+    background-color: #121212; /* Dark mode background */
+    color: #ffffff; /* White text for dark mode */
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #1f1f1f;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #555;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+}
+
+.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.light-mode header,
+.light-mode footer {
+    background-color: #ccc;
+}
+
+.light-mode nav button,
+.light-mode .download-button {
+    background-color: #fff;
+    color: #000;
+}
