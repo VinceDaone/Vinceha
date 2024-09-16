@@ -1,0 +1,52 @@
+body {
+    background-color: #121212; /* Dark mode background */
+    color: #ffffff; /* White text */
+    font-family: 'Minecraft', Arial, sans-serif; /* Minecraft font (use custom font loader or install locally) */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #1f1f1f;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px; /* White-cornered buttons */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px; /* White corners */
+    text-align: center;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+}
