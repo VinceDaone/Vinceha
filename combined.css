@@ -26,18 +26,27 @@ header {
     right: 0;
     background-color: #000000;
     z-index: 1000;
-    width: 100%;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #000000;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    transition: right 0.3s ease;
+    z-index: 2000;
+}
+
+.show-menu nav {
+    right: 0;
 }
 
 .menu-toggle {
-    display: none; /* Hidden by default */
     background-color: #000;
     color: #fff;
     border: 2px solid #fff;
@@ -48,10 +57,11 @@ nav {
 }
 
 .menu-items {
-    display: flex;
+    display: none;
+    flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
 }
 
 .menu-items a {
@@ -71,62 +81,42 @@ nav {
     background-color: #1f1f1f;
 }
 
-.page {
-    margin-top: 100px; /* To offset the fixed header */
-    padding: 2rem;
-    width: 100%;
-    text-align: center;
+/* Fix for Desktop screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide the menu button on larger screens */
+    }
+
+    .menu-items {
+        display: flex; /* Always show the menu items on desktop */
+        flex-direction: row; /* Ensure menu items are horizontal on desktop */
+    }
+
+    nav {
+        position: static; /* Normal positioning for desktop */
+        width: auto;
+        height: auto;
+    }
 }
 
-.intro-box {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Responsive Resizing */
+/* For mobile screens */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show toggle button for mobile */
+        display: block; /* Show menu button on mobile */
     }
 
     .menu-items {
         display: none; /* Hide menu items initially */
-        flex-direction: column;
-        align-items: center;
     }
 
-    .menu-items.show-menu {
-        display: flex; /* Show when toggled */
+    .show-menu .menu-items {
+        display: flex; /* Show menu items when toggled */
     }
 
-    .page {
-        padding: 1rem;
-    }
-
-    .intro-box p {
-        font-size: 12px; /* Smaller text on mobile */
-    }
-
-    .download-button {
-        font-size: 12px;
-    }
-}
-
-/* Resize elements based on screen size */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none; /* Hide toggle on larger screens */
-    }
-
-    .menu-items {
-        display: flex; /* Always show on larger screens */
-    }
-
-    .intro-box p {
-        font-size: 16px; /* Larger text for bigger screens */
-    }
-
-    .download-button {
-        font-size: 16px;
+    nav {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 250px;
     }
 }
