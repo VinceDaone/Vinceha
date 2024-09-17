@@ -50,14 +50,14 @@ nav {
     background-color: #000;
     color: #fff;
     border: 2px solid #fff;
-    padding: 0.3rem 0.6rem; /* Smaller padding for menu toggle */
+    padding: 0.3rem 0.6rem;
     font-family: 'Press Start 2P', Arial, sans-serif;
-    font-size: 10px; /* Smaller font size */
+    font-size: 10px;
     cursor: pointer;
 }
 
 .menu-items {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -65,13 +65,13 @@ nav {
 }
 
 .menu-items a {
-    padding: 0.2rem 0.4rem; /* Further reduced padding */
-    margin: 0.2rem; /* Reduced margin for tighter buttons */
-    font-size: 10px; /* Smaller font size */
+    padding: 0.2rem 0.4rem;
+    margin: 0.2rem;
+    font-size: 10px;
     background-color: #000000;
     color: #fff;
-    border: 1px solid #fff; /* Reduced border size */
-    border-radius: 6px; /* Slightly smaller rounded corners */
+    border: 1px solid #fff;
+    border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s;
     font-family: 'Press Start 2P', Arial, sans-serif;
@@ -158,58 +158,26 @@ nav {
     border-color: #4267B2;
 }
 
+/* For mobile screens */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+    }
+
+    .menu-items {
+        display: none; /* Hide menu items initially */
+    }
+
+    .show-menu .menu-items {
+        display: flex; /* Show menu items when toggled */
     }
 
     nav {
-        width: 100%;
-        height: auto;
-        position: static;
-        display: block;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .download-button {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    #social-media-buttons {
-        flex-direction: column;
-    }
-
-    .social-button {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 1rem;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 250px;
     }
 }
 
-.menu-items {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.menu-toggle {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 0.3rem 0.6rem;
-    font-family: 'Press Start 2P', Arial, sans-serif;
-    font-size: 10px;
-    cursor: pointer;
-}
-
-.show-menu .menu-items {
-    display: flex;
-}
+/*
