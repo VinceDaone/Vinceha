@@ -10,8 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start; /* Changed to flex-start */
+    min-height: 100vh;
     position: relative;
 }
 
@@ -26,6 +26,7 @@ header {
     right: 0;
     background-color: #000000;
     z-index: 1000;
+    width: 100%;
 }
 
 nav {
@@ -53,7 +54,7 @@ nav {
     padding: 0.3rem 0.6rem;
     font-size: 10px;
     cursor: pointer;
-    display: block; /* Ensure the menu button is visible on both mobile and PC */
+    display: block;
 }
 
 .menu-items {
@@ -83,8 +84,9 @@ nav {
 /* Page Styles */
 .page {
     display: none;
-    padding: 2rem;
+    padding: 5rem 2rem 2rem 2rem; /* Added more padding to avoid overlap with header */
     text-align: center;
+    margin-top: 4rem; /* Ensures content starts below header */
 }
 
 .intro-box {
@@ -191,10 +193,13 @@ nav {
     }
 }
 
+/* Ensure menu-items are hidden initially */
 .menu-items {
     display: none;
 }
 
 .show-menu .menu-items {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
