@@ -26,27 +26,18 @@ header {
     right: 0;
     background-color: #000000;
     z-index: 1000;
+    width: 100%;
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    height: 100%;
-    width: 250px;
-    background-color: #000000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    transition: right 0.3s ease;
-    z-index: 2000;
-}
-
-.show-menu nav {
-    right: 0;
+    width: 100%;
 }
 
 .menu-toggle {
+    display: none; /* Hidden by default */
     background-color: #000;
     color: #fff;
     border: 2px solid #fff;
@@ -57,11 +48,10 @@ nav {
 }
 
 .menu-items {
-    display: none;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .menu-items a {
@@ -81,42 +71,65 @@ nav {
     background-color: #1f1f1f;
 }
 
-/* Fix for Desktop screens */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none; /* Hide the menu button on larger screens */
-    }
-
-    .menu-items {
-        display: flex; /* Always show the menu items on desktop */
-        flex-direction: row; /* Ensure menu items are horizontal on desktop */
-    }
-
-    nav {
-        position: static; /* Normal positioning for desktop */
-        width: auto;
-        height: auto;
-    }
+.page {
+    margin-top: 100px; /* To offset the fixed header */
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    display: none; /* Hidden by default */
 }
 
-/* For mobile screens */
+.page.active {
+    display: block; /* Display the active page */
+}
+
+.intro-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show menu button on mobile */
+        display: block; /* Show toggle button for mobile */
     }
 
     .menu-items {
         display: none; /* Hide menu items initially */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .show-menu .menu-items {
-        display: flex; /* Show menu items when toggled */
+    .menu-items.show-menu {
+        display: flex; /* Show when toggled */
     }
 
-    nav {
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 250px;
+    .page {
+        padding: 1rem;
+    }
+
+    .intro-box p {
+        font-size: 12px; /* Smaller text on mobile */
+    }
+
+    .download-button {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide toggle on larger screens */
+    }
+
+    .menu-items {
+        display: flex; /* Always show on larger screens */
+    }
+
+    .intro-box p {
+        font-size: 16px; /* Larger text for bigger screens */
+    }
+
+    .download-button {
+        font-size: 16px;
     }
 }
