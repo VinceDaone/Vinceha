@@ -53,6 +53,7 @@ nav {
     padding: 0.3rem 0.6rem;
     font-size: 10px;
     cursor: pointer;
+    display: block; /* Ensure the menu button is visible on both mobile and PC */
 }
 
 .menu-items {
