@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Vince's Inner Void</title> 
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css"> 
+ </head> 
+ <body> <!-- Sidebar for Navigation --> 
+  <div class="sidebar" id="sidebar"> <button class="close-btn" onclick="toggleMenu()">✖</button> 
+   <nav> 
+    <ul> 
+     <li><a href="#" onclick="showSection('home')">Home</a></li> 
+     <li><a href="#" onclick="showSection('about')">About</a></li> 
+     <li><a href="#" onclick="showSection('social')">Social</a></li> 
+     <li><a href="#" onclick="showSection('downloads')">Download</a></li> 
+    </ul> 
+   </nav> 
+  </div> <!-- Menu Toggle Button --> <button class="menu-btn" onclick="toggleMenu()">☰</button> <!-- Home Section --> 
+  <section id="home" class="content-section"> 
+   <h2>Welcome to My Unknown World</h2> 
+   <p>Welcome to the Inner Crust Of Vince Discover updates, download custom packs, and connect with our community. Dive into Minecraft and explore exclusive content made for fans like you!</p> 
+   <ul> 
+    <li>Exciting Minecraft content and news</li> 
+    <li>Links to download custom Minecraft packs</li> 
+    <li>Information about our team and mission</li> 
+    <li>Links to our social media and community channels</li> 
+   </ul> 
+   <p>For the latest updates, be sure to <a href="https://www.youtube.com/@VinceCXD" class="subscribe-btn" target="_blank">subscribe to our YouTube channel</a>.</p> 
+  </section> <!-- Downloads Section --> 
+  <section id="downloads" class="content-section" style="display: none;"> 
+   <h2>Downloads</h2> 
+   <div class="downloads-list"> 
+    <div class="download-item"> <a href="https://linkpays.in/KX8i7g" class="download-btn">Download Void V4</a> 
+    </div> 
+    <div class="download-item"> <a href="https://linkpays.in/u1YT" class="download-btn">Download Void V3</a> 
+    </div> 
+    <div class="download-item"> <a href="https://linkpays.in/eIJ7h" class="download-btn">Download Void V2</a> 
+    </div> 
+    <div class="download-item"> <a href="https://linkpays.in/FY2X0U" class="download-btn">Download Exo Boost</a> 
+    </div> 
+    <div class="download-item"> <a href="https://linkpays.in/arCs" class="download-btn">Download No Vidia</a> 
+    </div> 
+   </div> 
+  </section> <!-- About Section --> 
+  <section id="about" class="content-section" style="display: none;"> 
+   <h2>About Us</h2> 
+   <p>We are passionate Minecraft players dedicated to creating unique and exciting Minecraft packs. Our goal is to enhance your gaming experience with the best resources and tools. Join us on this adventure and explore the endless possibilities of Minecraft.</p> 
+  </section> <!-- Social Section --> 
+  <section id="social" class="content-section" style="display: none;"> 
+   <h2>Connect With Us</h2> 
+   <div class="social-list"> 
+    <div class="social-item"> <a href="https://www.facebook.com/profile.php?id=100088204846684" class="social-btn">Facebook</a> 
+    </div> 
+    <div class="social-item"> <a href="https://www.youtube.com/@VinceCXD" class="social-btn">YouTube</a> 
+    </div> 
+    <div class="social-item"> <a href="https://www.instagram.com/vincedricvillaflorosorio?igsh=YzljYTk1ODg3Zg==" class="social-btn">Instagram</a> 
+    </div> 
+   </div> 
+  </section> <!-- Footer --> 
+  <footer> 
+   <p>© 2024 Vince. All Rights Reserved.</p> 
+  </footer> <!-- JavaScript to Show and Hide Sections & Sidebar --> 
+  <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '-250px' || sidebar.style.left === '') {
+                sidebar.style.left = '0';
+            } else {
+                sidebar.style.left = '-250px';
+            }
+        }
+    </script> 
+ </body>
+</html>
